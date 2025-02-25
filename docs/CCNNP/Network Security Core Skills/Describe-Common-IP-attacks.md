@@ -51,7 +51,7 @@
     UDP Vulnerabilities
         UCP = Connectionless
         Most attacks involving UDP relate to exhaustion of some shared resource (buffers, link capacity, and so on), or exploitation of bugs in protocol implementations, causing system crashes or other insecure behavior.
-    Attack Surface and Attack Vectors
+    Attack Surface and Attack Vectors (https://ondemandelearning.cisco.com/apollo-alpha/sec-scor-12tcpipattack-20/pages/6)
         Attack surface = is the total sum of all the vulnerabilities in a given computing device or network that are accessible to the attackers.
         Attack vectors = the paths or means by which the attackers gain access to a resource (such as end-user hosts or servers) to deliver malicious software or malicious outcome.
         Attack Surfaces
