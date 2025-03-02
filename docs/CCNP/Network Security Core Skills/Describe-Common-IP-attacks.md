@@ -3,6 +3,9 @@
 ## Contents
  - [Legacy TCP/IP Vulnerabilities]
 
+- [1 - Describe Common TCP/IP Attacks](#1---describe-common-tcpip-attacks)
+  - [Contents](#contents)
+  - [\[↑\] (#contents) Legacy TCP/IP Vulnerabilities](#-contents-legacy-tcpip-vulnerabilities)
 
 
 
@@ -61,5 +64,55 @@
             - Comprises all vulnerabilities that are related to ports, protocols, channels, devices (smartphones, laptops, routers, and firewalls), services, network applications, and even firmware interfaces.
           - The software attack surface
             - The complete profile of all functions in any code that is running in a given system that is available to an unauthenticated user. An attacker or a piece of malware can use various exploits to gain access and run code on the target machine. The software attack surface is calculated across many different kinds of code, including applications, email services, configurations, compliance policy, databases, executables, dynamic link libraries (DLLs), web pages, mobile apps, device OS, and so on.
-          - The physical attack surface
-            - 
+          - The physical attack surface is composed of the security vulnerabilities in a given system that are available to an attacker in the same location as the target. The physical attack surface is exploitable through inside threats such as rogue employees, social engineering ploys, and intruders who are posing as service workers.
+          - The social engineering attack surface usually takes advantage of human psychology: the desire for something free, the susceptibility to distraction, or the desire to be liked or to be helpful.
+        An attack vector is a path or route by which an attack was carried out
+          - Reconaissance Attacks
+            - Packet sniffers
+            - Ping Sweeps
+            - Port Scans
+            - Information Queries
+            - Passive
+              - User Groups
+              - Website details
+              - Shodan
+            - Active
+              - Port Scans
+              - DNS lookups
+              - Ping sweeps
+              - Traceroute
+              - OS Fingerprinting
+          - Known Vulnerabilities
+          - SQL Injection
+          - Phishing
+          - Malware
+          - Weak Authentication
+            - Passwowrd Attack
+            - Spoofing/Masquerading
+            - Session hijacking
+            - Malware
+          - Actor-In-The-Middle attacks
+            - Physical Layer
+              - Tap someones physical connection
+            - Data Link Layer
+              - Use ARP poisoning to redirect packets
+                - ARP-based MITM attack is achieved when an attacker poisons the ARP cache of two devices with the MAC address of the attacker's network interface controller (NIC). When the ARP caches have been successfully poisoned, each victim device sends all its packets to the attacker when communicating to the other device and puts the attacker in the middle of the communications path between the two victim devices. 
+            - Network Layer
+              - Manipulate routing
+                -  An ICMP MITM attack is accomplished by spoofing an ICMP redirect message to any router that is in the path between the victim client and server. An ICMP redirect message is typically used to notify routers of a better route; however, it can be abused to effectively route the victim's traffic through an attacker-controlled router. 
+            - Sesssion Layer 
+              - SSL/TLS AITM de-crypts and inspection. 
+              - DNS spoofing is a MITM technique that is used to supply false DNS information to a host so that when they attempt to browse
+              - Similar to the DNS attack, DHCP server queries and responses are intercepted.
+            - Applicaiton Layer
+              - Malware infrection and manipulates web pages. 
+          DoS attacks
+            - Reflection and Amplification Attacks
+          Spoofing Attacks
+            - IP Address spoofing
+            - MAC adress spoofing
+            - Application or service spoofing. 
+              - E.g. DHCP spoofing
+                - The attacker runs DHCP server software and replies to DHCP requests from legitimate clients. As a rogue DHCP server, the attacker can cause a DoS by providing invalid IP information. The attacker can also perform confidentiality or integrity breaches via a man-in-the-middle attack. The attacker can assign itself as the default gateway or DNS server in the DHCP replies, later intercepting IP communications from the configured hosts to the rest of the network.
+              - DHCP Starvation
+                - The attack eshausts the DHCP address pool. 
