@@ -65,10 +65,10 @@
 
     The figure illustrates an example where an attacker has compromised a legitimate website (example.com), causing the website to respond to the victim's HTTP request to compromise.example.com/index.php with the 302 Found HTTP response status code. This creates a series of HTTP 302 redirects through the attacker's proxies before the victim's browser is finally redirected to the attacker's web page that spreads the malicious exploit to the victim.
 
-    ![alt text](image-1.png)
+![alt text](image-1.png)
 
     The figure shows a partial Wireshark output, which illustrates the HTTP 302 response where a compromised website is used to redirect the victim.
-    ![alt text](image-2.png)
+![alt text](image-2.png)
 
     Countermeasures to attacks using HTTP 302 cushioning include the following:
     - Use a service such as Cisco Umbrella to block the users from accessing malicious web sites.
