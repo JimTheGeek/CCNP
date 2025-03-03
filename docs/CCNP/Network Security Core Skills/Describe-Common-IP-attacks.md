@@ -1,7 +1,7 @@
 # 1 - Describe Common TCP/IP Attacks
 
 ## Contents
- - [Legacy TCP/IP Vulnerabilities]
+
 
 - [1 - Describe Common TCP/IP Attacks](#1---describe-common-tcpip-attacks)
   - [Contents](#contents)
@@ -9,7 +9,7 @@
 
 
 
-## [↑] (#contents) Legacy TCP/IP Vulnerabilities
+## [] (#contents) Legacy TCP/IP Vulnerabilities
     Early tools were insecure as default. 
         E.g. rlogin, rcp, rsh - No password needed. 
     1988 "Morris worm", precuror to other well known attacks. Exploited common utilities `sendmail` and `finger` 

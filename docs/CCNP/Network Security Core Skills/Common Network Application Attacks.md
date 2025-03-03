@@ -64,7 +64,76 @@
 
 ## Command Injections
 
+    Command injection is an attack whereby an attacker's goal is to execute arbitrary commands on the web server's OS via a vulnerable web application. Command injection vulnerability occurs when the web application supplies vulnerable, unsafe input fields to the malicious users to input malicious data.
+
+    The following example illustrates the use of command injection in an HTTP request:
+
+    - When viewing a file in a web application, the file name is often shown in the URL. Normal URL:
+        http://www.example.com/sensitive/cgi-bin/userData.pl?doc=user1.txt
+
+    - The attacker modified the above URL with the command injection that will execute the /bin/ls command:
+        http://www.example.com/sensitive/cgi-bin/userData.pl?doc=/bin/ls
+
+
 ## SQL-Site Scripting and Request Forgery
 
+    SQL attacks are very common because databases, which often contain sensitive and valuable information, are attractive targets.
+
+    An SQL injection attack consists of inserting a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data, execute administration operations on the data
+
+    The following is the same query with a SQL injection:
+            SELECT UserID FROM users WHERE username = 'anything' OR 1=1 -- AND password = 'hacktheplanet'
+    
+    The result is that the query will succeed, even though it should have failed, given the invalid username and password. The problem is that the attacker will get logged in as the first user that matches, which is not a good thing because the first user in the database is generally an administrator. The attack could be modified to target a specific username, but the attacker would have to know (or guess) that username.
+
+    Countermeasures include the following:
+    - Application developers should follow the best practices to perform proper user input validation, constrain, and sanitize the user input data.
+    - Deploy an IPS solution to detect and prevent malicious SQL injections.
+
+## Cross-Site Scripting and Request Forgery
+
+    Both XSS and cross-site request forgery (CSRF) are prevalent threats to the security of web applications. Understanding how these web-based attacks work will help you investigate and prevent the attacks from spreading across the secured network.
+
+    XSS is a type of command injection web-based attack, which uses malicious scripts that are injected into otherwise benign and trusted websites. The malicious scripts are then served to other victims who are visiting the infected websites. For example, the malicious script may steal all the sensitive data from the user's cookies that are stored in the browser.
+
+    CSRF is a type of attack that occurs when a malicious website, email, blog, instant message, and so on causes a user's web browser to perform an unwanted action on a trusted website for which the user is currently authenticated. 
+
+    You need to beware that XSS and CSRF can also be used in combination during attacks, for example the attacks can use XSS to automatically submit the CSRF HTTP request (so that victims do not have to click a link), but XSS or CSRF do not depend on each other.
+
+    ### XSS 
+    #### Types of XSS attacks include
+    Stored (Persistent) 
+        Stored XSS is the most damaging type because it is permanently stored in the XSS-infected server. The victim receives the malicious script from the server whenever they visit the infected web page.
+    Reflected (non-persistent)
+        Most Common type
+        In order for the attack to succeed, the victim needs to click the infected link. Reflected XSS attacks are typically delivered to the victims via an email message or through some other website. 
+    
+    Countermeasures include the following:
+    - Deploy a service such as Cisco Umbrella to block the users from accessing malicious websites.
+    - Deploy a web proxy security solution, such as Cisco WSA, to block users from accessing malicious websites.
+    - Deploy an IPS solution to detect and prevent malicious XSS or CSRF.
+    - Educate end users—for example, how to recognize phishing attacks.
+
+    ### Cross-Site Request Forgery
+
+    CSRF attacks can include unauthorized changes of user information or the extraction of user-sensitive data from a web application. CSRF exploits utilize social engineering to convince a user to open a link that, when processed by the affected web application, could result in arbitrary code execution.
+    CSRF attacks are used by an attacker to make a target system perform a function via the target's browser without their knowledge, at least until the unauthorized transaction has been committed. Examples of CSRF attacks are numerous but the most common involves bank account fund transfers
+
 ## Email-Based Attacks
+
+    The following are examples of email threats:
+    - Attachment-based
+      -  Specifically crafted attacks come in targeted messages that include such malicious attachments.
+    - Email Spoofing
+      - The creation of email messages with a forged sender address that is meant to fool the recipient into providing money or sensitive information.
+    - Spam
+      - Unsolicited email or "junk" mail that you receive in your inbox.
+    - Open mail relay
+      - A Simple Mail Transfer Protocol (SMTP) server that is configured to allow anyone—not just known corporate users—on the internet to send an email. 
+    - Homoglyphs
+      - Text characters that have shapes that are identical or similar to each other. With the advanced phishing attacks today, phishing emails may contain homoglyphs.
+
+    Countermeasures include the following:
+    - Deploy an email security appliance/proxy, such as the Cisco Email Security Appliance (ESA), to detect and block a wide variety of email threats, such as malware, spam, phishing attempts, and so on.
+    - Educate end users—for example, how to recognize phishing attacks, and to never open any suspicious email attachment.
 
