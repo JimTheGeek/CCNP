@@ -1,6 +1,19 @@
-# Describe Common Network Application Attacks
 
-## Password Attacks
+- [1. Describe Common Network Application Attacks](#1-describe-common-network-application-attacks)
+  - [1.1. Password Attacks](#11-password-attacks)
+  - [1.2. DNS-Based Attacks](#12-dns-based-attacks)
+  - [1.3. DNS Tunnelling](#13-dns-tunnelling)
+  - [1.4. Web-Based Attacks](#14-web-based-attacks)
+  - [1.5. HTTP 302 Cushioning](#15-http-302-cushioning)
+  - [1.6. Command Injections](#16-command-injections)
+  - [1.7. SQL-Site Scripting and Request Forgery](#17-sql-site-scripting-and-request-forgery)
+  - [1.8. Cross-Site Scripting and Request Forgery](#18-cross-site-scripting-and-request-forgery)
+  - [1.9. Email-Based Attacks](#19-email-based-attacks)
+
+
+# 1. Describe Common Network Application Attacks
+
+## 1.1. Password Attacks
 
     Some methods used to obtain passwords. 
     - Password guessing
@@ -14,9 +27,9 @@
 
     Another countermeasure against password attacks is two-factor authentication.
 
-## DNS-Based Attacks
+## 1.2. DNS-Based Attacks
 
-## DNS Tunnelling
+## 1.3. DNS Tunnelling
 
     DNS tunneling is where another protocol or data is hidden in the DNS packets. Typically, attackers will use DNS tunneling for stealthy data exfiltration in a data breach or for the CnC traffic communications.
 
@@ -32,7 +45,7 @@
     - Monitor the DNS log for suspicious activities such as DNS queries with unusually long and suspicious domain names.
     - Deploy a solution such as Cisco Umbrella to block the DNS tunneling traffic from going out to the malicious domains.
 
-## Web-Based Attacks
+## 1.4. Web-Based Attacks
 
     The figure shows how attackers use WordPress servers as their ransomware infrastructure.
 ![alt text](image.png)
@@ -44,7 +57,7 @@
     - Deploy a web proxy security solution, such as the Cisco Web Security Appliance, to block users from accessing malicious websites.
     - Educate end users on how web-based attacks occur.
 
-## HTTP 302 Cushioning
+## 1.5. HTTP 302 Cushioning
 
     A website can change the path that is used to reach a resource by issuing an HTTP redirect to direct the user's web browser to the new location. The 302 Found HTTP response status code can be used for this purpose. The HTTP response status code 302 Found is a common way of performing URL redirection. Attackers often use legitimate HTTP functions, such as HTTP redirects, to carry out their attacks. 
 
@@ -62,7 +75,7 @@
     - Deploy a web proxy security solution, such as the Cisco Web Security Appliance (WSA) to block users from accessing malicious web sites.
     - Educate end users on how the browser is redirected to a malicious web page that delivers the exploit to the victim's machine through a series of HTTP 302 redirections.
 
-## Command Injections
+## 1.6. Command Injections
 
     Command injection is an attack whereby an attacker's goal is to execute arbitrary commands on the web server's OS via a vulnerable web application. Command injection vulnerability occurs when the web application supplies vulnerable, unsafe input fields to the malicious users to input malicious data.
 
@@ -75,7 +88,7 @@
         http://www.example.com/sensitive/cgi-bin/userData.pl?doc=/bin/ls
 
 
-## SQL-Site Scripting and Request Forgery
+## 1.7. SQL-Site Scripting and Request Forgery
 
     SQL attacks are very common because databases, which often contain sensitive and valuable information, are attractive targets.
 
@@ -90,7 +103,7 @@
     - Application developers should follow the best practices to perform proper user input validation, constrain, and sanitize the user input data.
     - Deploy an IPS solution to detect and prevent malicious SQL injections.
 
-## Cross-Site Scripting and Request Forgery
+## 1.8. Cross-Site Scripting and Request Forgery
 
     Both XSS and cross-site request forgery (CSRF) are prevalent threats to the security of web applications. Understanding how these web-based attacks work will help you investigate and prevent the attacks from spreading across the secured network.
 
@@ -119,7 +132,7 @@
     CSRF attacks can include unauthorized changes of user information or the extraction of user-sensitive data from a web application. CSRF exploits utilize social engineering to convince a user to open a link that, when processed by the affected web application, could result in arbitrary code execution.
     CSRF attacks are used by an attacker to make a target system perform a function via the target's browser without their knowledge, at least until the unauthorized transaction has been committed. Examples of CSRF attacks are numerous but the most common involves bank account fund transfers
 
-## Email-Based Attacks
+## 1.9. Email-Based Attacks
 
     The following are examples of email threats:
     - Attachment-based
